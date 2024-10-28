@@ -1,19 +1,19 @@
 ## Présentation du TP : Développement d'une Application de Cours en Ligne
 
-### Objectifs du TP
+### Objectifs pédagogique de la semaine
 
-Dans ce projet d'une semaine, nous allons développer une application web en TypeScript et React qui consomme une API sécurisée par un jeton JWT pour gérer l'accès aux cours en ligne. Vous apprendrez à structurer votre code en suivant la méthodologie Atomic Design, à intégrer RTK Query pour gérer les requêtes API, et à mettre en place un style visuel cohérent avec Tailwind CSS. Ce TP est idéal pour découvrir et mettre en pratique des concepts avancés de développement frontend, notamment :
+Dans ce projet d'une semaine, nous allons développer une application web en TypeScript et React qui consomme une API sécurisée par un jeton JWT pour gérer l'accès aux cours en ligne. Vous apprendrez à structurer votre code en suivant la méthodologie Atomic Design, à intégrer RTK Query pour gérer les requêtes API, et à mettre en place un style visuel cohérent avec Tailwind CSS. 
 
-1. **Atomic Design** : Apprendre à organiser le code en composants réutilisables, modulaires et maintenables.
+1. **Atomic Design**  organiser le code en composants réutilisables, modulaires et maintenables.
 2. **Gestion d'état avec Redux et RTK Query** : Utiliser Redux Toolkit et RTK Query pour gérer l’état global et les appels API de manière performante et structurée.
 3. **Sécurisation avec JWT** : Intégrer une authentification sécurisée par jeton JWT pour restreindre l’accès aux ressources de l’application.
 4. **APIs REST** : Comprendre comment interagir avec une API RESTful et structurer les requêtes.
 
 ### Fonctionnalités de l'application
 
+- **Design modulaire** : Mettre en place un design soigné avec Tailwind CSS et suivre la structure Atomic Design pour organiser les composants de l’application.
 - **Connexion utilisateur** : Une page de connexion avec un formulaire de saisie et un système d’authentification sécurisé par JWT.
 - **Gestion des cours en ligne** : Afficher tous les cours accessibles après connexion et récupérer les informations via une API sécurisée.
-- **Design modulaire** : Mettre en place un design soigné avec Tailwind CSS et suivre la structure Atomic Design pour organiser les composants de l’application.
 
 ### Déroulement du TP
 
@@ -36,17 +36,10 @@ Le TP se déroulera en deux parties principales :
      - Stocker le jeton JWT et le transmettre dans les requêtes pour accéder aux ressources sécurisées (comme la liste des cours).
    - Créer des requêtes pour récupérer les cours via **RTK Query** et afficher les données dans un composant d’organisme.
 
-### Technologies utilisées
-
-- **React + TypeScript** : pour une application frontend robuste et bien typée.
-- **Redux Toolkit (RTK)** et **RTK Query** : pour la gestion d’état et les requêtes API.
-- **Atomic Design** : pour organiser les composants de manière modulaire et réutilisable.
-- **Tailwind CSS** : pour une gestion flexible et réactive du style.
-- **JWT** : pour sécuriser l'accès aux ressources de l’application.
 
 ### Résultats attendus
 
-À la fin de ce TP, vous aurez réalisé une application de cours en ligne, structurée et sécurisée. Vous aurez maîtrisé la mise en place d’une architecture solide et réutilisable, géré l’état global et les appels API avec RTK, et intégré un design réactif avec Tailwind CSS.
+Vous aurez réalisé une application de cours en ligne, structurée et sécurisée. Vous aurez maîtrisé la mise en place d’une architecture solide et réutilisable, géré l’état global et les appels API avec RTK, et intégré un design réactif avec Tailwind CSS.
 
 ### Ce que vous devez faire 
 
