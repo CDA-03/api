@@ -4,7 +4,7 @@ TypeScript est un sur-ensemble de JavaScript développé par Microsoft, qui ajou
 
 ## Installation
 
-[doc]()
+[doc](./install.md)
 
 ### Pourquoi utiliser TypeScript ?
 
