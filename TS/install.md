@@ -11,6 +11,7 @@ Installez les dépendances nécessaires, notamment `typescript`, `ts-node` pour 
 
 ```bash
 npm install typescript ts-node nodemon --save-dev
+npm install concurrently --save-dev
 ```
 
 ### 3. Configurer TypeScript
@@ -43,7 +44,7 @@ Créez un fichier `nodemon.json` à la racine du projet pour configurer Nodemon 
   "watch": ["src"],
   "ext": "ts",
   "ignore": ["dist"],
-  "exec": "ts-node ./src/index.ts"
+  "exec": "concurrently \"npx tsc --watch\" \"node -r ts-node/register --env-file=.env src/index.ts\""
 }
 ```
 

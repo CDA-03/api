@@ -102,3 +102,47 @@ TypeScript est particulièrement utile pour les applications à grande échelle 
 - Projets en équipes nombreuses où la documentation et les types peuvent être automatisés
 
 TypeScript favorise une meilleure organisation du code, réduit les erreurs lors du développement, et améliore la collaboration. C’est un outil très précieux pour les développeurs souhaitant optimiser la qualité et la maintenabilité de leur code JavaScript.
+
+### Typage personnalisé
+
+Objectif
+Comprendre comment étendre les types de Node.js pour inclure des variables d'environnement personnalisées dans un projet TypeScript.
+
+1. Introduction
+   
+En Node.js, les variables d'environnement sont accessibles via l'objet process.env. Par défaut, TypeScript ne connaît pas les variables d'environnement que vous avez définies dans votre fichier .env. Pour éviter les erreurs de typage, vous pouvez déclarer ces variables dans votre code.
+
+
+## Type dans TypeScript
+
+Le type `Record` en TypeScript est un utilitaire qui permet de définir un objet dont les clés et les valeurs sont de types spécifiques. Cela facilite la création de types d'objets avec des propriétés dynamiques. Voici un aperçu détaillé de `Record`, ainsi qu'une explication du code que vous avez fourni.
+
+### 1. Qu'est-ce que `Record` ?
+
+`Record<K, V>` est un type générique dans TypeScript qui crée un type d'objet dont les clés sont de type `K` et les valeurs sont de type `V`. 
+
+#### Syntaxe
+
+```typescript
+Record<K, V>
+```
+
+- `K` : Type des clés de l'objet (peut être une chaîne, un nombre ou un symbole).
+- `V` : Type des valeurs de l'objet.
+
+#### Exemple
+
+Voici un exemple simple d'utilisation de `Record` :
+
+```typescript
+type Product = {
+  id: number;
+  name: string;
+  category: string;
+};
+
+const productsById: Record<number, Product> = {
+  1: { id: 1, name: "Apple", category: "Fruit" },
+  2: { id: 2, name: "Broccoli", category: "Vegetable" },
+};
+```
