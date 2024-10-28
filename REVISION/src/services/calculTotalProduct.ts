@@ -1,6 +1,4 @@
 import { OrderItem } from "../types/OrderItem";
-import dotenv from "dotenv"
-dotenv.config()
 
 const precision: string = process.env.API_PRECISION || '100'
 

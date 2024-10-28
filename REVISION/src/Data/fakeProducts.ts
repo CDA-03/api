@@ -1,4 +1,5 @@
 import { OrderItem } from "../types/OrderItem";
+import { StockItem } from "../types/StockItem";
 import { Product } from "../types/TypeProduct";
 
 // données typées
@@ -15,3 +16,7 @@ export const orders : OrderItem[] = [
     { product : products[1] , quantity : 6},
     { product :  products[2] , quantity : 7},
 ]
+
+export const stockItem : StockItem = {
+    product : products[0], stock : 10
+}

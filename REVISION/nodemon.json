@@ -2,5 +2,5 @@
     "watch": ["src"],
     "ext": "ts",
     "ignore": ["dist"],
-    "exec": "ts-node -r dotenv/config ./src/index.ts"
+    "exec": "concurrently \"npx tsc --watch\" \"node -r ts-node/register --env-file=.env src/index.ts\""
   }
