@@ -1,8 +1,17 @@
-import { filter } from "./services/filterProduct"
-import { products } from "./Data/fakeProducts";
-import { sortProduct } from "./services/sortProduct";
+import { filterProduct } from "./services/filterProduct"
+import { sortProduct } from "./services/sortProduct"
+import { calculTotalProduct } from "./services/calculTotalProduct"
 
-console.log(filter(products, "Electronics"));
+import 'dotenv/config'
+
+console.log(process.env.PRECISION)
+
+import { products, orders } from "./Data/fakeProducts"
+
+console.log(filterProduct(products, "Electronics"));
 
 console.log( sortProduct(products) )
 console.log( sortProduct(products, false) )
+
+
+console.log( calculTotalProduct(orders) )
