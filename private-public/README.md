@@ -1,5 +1,6 @@
-docker-compose up -d  # Lancer les conteneurs
-docker-compose exec app bash 
+docker-compose up -d  
+
+docker exec -it treelearning_symfony bash 
 
 # Générez une clé privée
 openssl genpkey -algorithm RSA -out /app/config/jwt/private.pem -aes256
