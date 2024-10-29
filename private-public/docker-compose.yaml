@@ -1,0 +1,8 @@
+services:
+  appjwt:
+    build:
+      context: .
+      container_name: jwt_create
+      dockerfile: Dockerfile
+    volumes:
+      - ./config/jwt:/app/config/jwt  # Monte le dossier des clés
