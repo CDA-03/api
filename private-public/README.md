@@ -1,6 +1,6 @@
 docker-compose up -d  
 
-docker exec -it treelearning_symfony bash 
+docker exec -it jwt_create bash 
 
 # Générez une clé privée
 openssl genpkey -algorithm RSA -out /app/config/jwt/private.pem -aes256
