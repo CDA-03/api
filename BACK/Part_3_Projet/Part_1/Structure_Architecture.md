@@ -2,6 +2,8 @@
 
 ## Installation 
 
+- 🧾 Suivez le GitFlow suivant : [gitlfow](../../gitFLow_simple.md)
+
 ```bash
 git clone git@github.com:CDA-03/api-modules.git
 ```
