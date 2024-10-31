@@ -1,5 +1,13 @@
 # Back API
 
+Voici les endpoints 
+
+```txt
+/api/me
+/api/modules
+/api/login_check
+```
+
 ## Installation 
 
 - 🧾 Suivez le GitFlow suivant : [gitlfow](../../gitFLow_simple.md)
