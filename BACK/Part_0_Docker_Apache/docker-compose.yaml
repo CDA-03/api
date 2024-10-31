@@ -1,0 +1,65 @@
+services:
+  php:
+    build: ./Dockerfile.app
+    container_name: treelearning_app
+    volumes:
+      - ./app:/var/www/html
+      - ./vhost.conf:/etc/apache2/sites-available/000-default.conf 
+    environment:
+      SYMFONY_ENV: dev
+      APACHE_RUN_USER: www-data
+      APACHE_RUN_GROUP: www-data
+    working_dir: /var/www/html
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    networks:
+      - network_treelearning
+    restart: always
+
+  db:
+    image: postgres:latest
+    container_name: treelearning_postgres_app
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"  # Expose le port PostgreSQL pour l'accès externe
+    networks:
+      - network_treelearning
+    restart: always
+
+  adminer:
+    image: adminer
+    container_name: treelearning_adminer_app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - network_treelearning
+    restart: always
+
+  react:
+    image: node:20.18.0
+    container_name: treelearning_client
+    working_dir: /usr/src/app
+    volumes:
+      - ./client:/usr/src/app  # Assurez-vous que le code React est dans ce dossier
+    ports:
+      - "5174:5173"  # Port de développement pour React
+    #command: ["npm", "run", "dev"]
+    networks:
+      - network_treelearning
+    restart: always
+    tty: true # Permet de garder le conteneur actif, ce qui est utile pour le développement.
+
+volumes:
+  db_data:
+
+networks:
+  network_treelearning:
+    driver: bridge
